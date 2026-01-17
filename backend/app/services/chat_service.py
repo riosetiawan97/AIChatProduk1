@@ -14,18 +14,30 @@ class ChatService:
 
         # 1. Budget / Bundling Intent
         # Look for numbers like "200rb", "200.000", "200000"
-        budget_match = re.search(r'(\d+)(?:rb|k|\.000|000)', message_lower)
-        if "budget" in message_lower and budget_match:
+        budget_match = re.search(r'(\d+)(?:rb|k|\.000|000|\d{3})', message_lower)
+        
+        # Relaxed intent keywords: budget, seharga, uang, rp (if followed by number)
+        is_budget_intent = any(kw in message_lower for kw in ["budget", "seharga", "uang", "dana"])
+        if (is_budget_intent or "rp" in message_lower) and budget_match:
             try:
-                # Extract amount. If 'rb' or 'k', multiply by 1000.
-                amount_str = budget_match.group(1).replace('.', '')
-                amount = int(amount_str)
-                if 'rb' in budget_match.group(0) or 'k' in budget_match.group(0):
+                raw_match = budget_match.group(0)
+                amount_prefix = int(budget_match.group(1))
+                amount = amount_prefix
+
+                # Fix Parsing Logic
+                if 'rb' in raw_match or 'k' in raw_match:
                     amount *= 1000
-                elif budget_match.group(0).endswith('.000'):
-                     pass # Already full number
-                elif len(amount_str) < 4: # e.g. "200" interpreted as 200k if simplistic
-                     amount *= 1000 # Safe assumption for "200 budget"
+                elif raw_match.endswith('.000') or raw_match.endswith('000'):
+                    # User likely typed 200.000 or 200000. group(1) caught 200.
+                    # We must assume the suffix meant thousands if the prefix is small
+                    # OR simply treat it as the full number if we parsed it via regex (which splits it).
+                    # Actually, if regex is (\d+)(...000), group(1) might be 200.
+                    # Safety check: if amount is small (<1000) and we see '000', multiply.
+                    if amount < 1000: 
+                        amount *= 1000
+                elif len(str(amount)) < 4: 
+                    # E.g. "200" without suffix, but context implies budget -> assume 'k'
+                    amount *= 1000
 
                 # Generate Bundle
                 bundle = pricing_service.create_bundle(amount)
