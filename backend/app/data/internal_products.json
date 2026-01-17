@@ -1,0 +1,22 @@
+[
+  {"id": "INT001", "name": "Paket Souvenir Kantor A (Note + Pen)", "category": "Souvenir", "price": 45000, "stock": 100},
+  {"id": "INT002", "name": "Paket Souvenir Kantor B (Tumbler + Towel)", "category": "Souvenir", "price": 85000, "stock": 50},
+  {"id": "INT003", "name": "Tas Spunbond Custom", "category": "Souvenir", "price": 5000, "stock": 500},
+  {"id": "INT004", "name": "Jam Dinding Analog Premium", "category": "Souvenir", "price": 60000, "stock": 30},
+  {"id": "INT005", "name": "Flashdisk Kartu 16GB", "category": "Electronics", "price": 55000, "stock": 200},
+  {"id": "INT006", "name": "Bluetooth Speaker Mini", "category": "Electronics", "price": 120000, "stock": 15},
+  {"id": "INT007", "name": "Mouse Wireless Logam", "category": "Electronics", "price": 95000, "stock": 40},
+  {"id": "INT008", "name": "Powerbank 10000mAh Custom", "category": "Electronics", "price": 150000, "stock": 25},
+  {"id": "INT009", "name": "Kaos Polos Cotton Combed 30s", "category": "Apparel", "price": 35000, "stock": 300},
+  {"id": "INT010", "name": "Topi Baseball Custom Bordir", "category": "Apparel", "price": 25000, "stock": 150},
+  {"id": "INT011", "name": "Mug Keramik Standar", "category": "Home", "price": 15000, "stock": 200},
+  {"id": "INT012", "name": "Tumbler Stainless Vacuum", "category": "Home", "price": 75000, "stock": 60},
+  {"id": "INT013", "name": "Agenda Kulit Sintetis", "category": "Office", "price": 40000, "stock": 80},
+  {"id": "INT014", "name": "Pulpen Metal Eksklusif", "category": "Office", "price": 20000, "stock": 120},
+  {"id": "INT015", "name": "Payung Lipat 3 Custom", "category": "Home", "price": 45000, "stock": 70},
+  {"id": "INT016", "name": "Kipas Angin Portable", "category": "Electronics", "price": 35000, "stock": 50},
+  {"id": "INT017", "name": "Headset Bluetooth Sport", "category": "Electronics", "price": 110000, "stock": 20},
+  {"id": "INT018", "name": "Totebag Kanvas", "category": "Apparel", "price": 25000, "stock": 200},
+  {"id": "INT019", "name": "Lanyard Custom Printing", "category": "Office", "price": 10000, "stock": 1000},
+  {"id": "INT020", "name": "Gift Set Corporate (Pen, NB, Card Holder)", "category": "Souvenir", "price": 120000, "stock": 40}
+]

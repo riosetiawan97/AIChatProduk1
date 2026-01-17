@@ -1,0 +1,62 @@
+[
+    {
+        "id": "EXT001",
+        "name": "Tumbler Sakura (Marketplace A)",
+        "price": 35000,
+        "source": "Tokopedia Scraping"
+    },
+    {
+        "id": "EXT002",
+        "name": "USB Hub 4 Port (Marketplace B)",
+        "price": 20000,
+        "source": "Shopee Scraping"
+    },
+    {
+        "id": "EXT003",
+        "name": "Mousepad Gaming Polos",
+        "price": 15000,
+        "source": "Bukalapak Scraping"
+    },
+    {
+        "id": "EXT004",
+        "name": "Botol Minum Plastik 1L",
+        "price": 12000,
+        "source": "Lazada Scraping"
+    },
+    {
+        "id": "EXT005",
+        "name": "Earphone Kabel Basic",
+        "price": 25000,
+        "source": "Tokopedia Scraping"
+    },
+    {
+        "id": "EXT006",
+        "name": "Phone Holder Meja",
+        "price": 8000,
+        "source": "Shopee Scraping"
+    },
+    {
+        "id": "EXT007",
+        "name": "Lampu Tidur LED Mini",
+        "price": 10000,
+        "source": "Tokopedia Scraping"
+    },
+    {
+        "id": "EXT008",
+        "name": "Kabel Data Type C Fast Charging",
+        "price": 18000,
+        "source": "Shopee Scraping"
+    },
+    {
+        "id": "EXT009",
+        "name": "Pouch Serut Blacu",
+        "price": 5000,
+        "source": "Bukalapak Scraping"
+    },
+    {
+        "id": "EXT010",
+        "name": "Gantungan Kunci Akrilik",
+        "price": 3000,
+        "source": "Lazada Scraping"
+    }
+]
